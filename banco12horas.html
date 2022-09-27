@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>
+        notas disponiveis 
+        100 R$
+        50 Reais 
+        10 Reais
+
+    </h2>
+
+    <input id="ipt_saque" type="text">
+
+    <button onclick="solicitar()">solicitarsaque</button>
+</body>
+</html>
+
+
+<script>
+     var saldo = 1000 
+     
+     function solicitar() {
+      var saque = Number(ipt_saque.value)
+      
+      if (saque > 0 ) {
+
+      if(saque % 10 == 0){
+        
+
+      if (saldo >= saque) {
+        saldo -= saque 
+        
+        alert(`Retire o dinheiro`)   
+        } else {
+            alert(`Valor solicitado maior que o disponível na máquina`)
+        }
+
+      } else{
+        alert(`Valor não possível devido às notas disponíveis`)
+      }
+        
+      } else {
+        alert(`não é possível sacar menos que 0 `)
+      }
+     }
+
+</script>
